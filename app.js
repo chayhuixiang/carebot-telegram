@@ -12,7 +12,7 @@ let sendHour = 16;
 let sendMinute = "00";
 let sendTiming;
 let botName;
-let user = {name:"@naantseenvwenya",type:"username"};
+let user = {name:"@Ivanlowkey",type:"username"};
 let userId;
 let name;
 
@@ -113,11 +113,15 @@ bot.onText(/\/help/,(msg,match)=>{
     botName = match.input.split(" ")[0].split("@")[1]
     if (botName == undefined || botName == "huixx_bot"){
         if (user.type == "username"){
-            bot.sendMessage(chatId,`‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏Commands List\n\n/start@huixx_bot - start caring for ${user.name}\n/help@huixx_bot - display help menu\n/user@huixx_bot <tag> - start caring for somebody else\n/time@huixx_bot <time in 24hr clock> - change time to show care\n/stop@huixx_bot - stop caring for ${user.name}`);
+            bot.sendMessage(chatId,`‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏              Commands List\n\n/start@huixx_bot - start caring for ${user.name}\n/help@huixx_bot - display help menu\n/user@huixx_bot <tag> - start caring for somebody else\n/time@huixx_bot <time in 24hr clock> - change time to show care\n/stop@huixx_bot - stop caring for ${user.name}`);
         } else if (user.type == "userid"){
-            bot.sendMessage(chatId,`‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ ‏‏‎ ‎‏‏Commands List\n\n/start@huixx\\_bot \\- start caring for ${user.name}\n/help@huixx\\_bot \\- display help menu\n/user@huixx\\_bot <tag\\> \\- start caring for somebody else\n/time@huixx\\_bot <time in 24hr clock\\> \\- change time to show care\n/stop@huixx\\_bot \\- stop caring for ${user.name}`,{parse_mode:"MarkdownV2"});
+            bot.sendMessage(chatId,`‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ ‏‏‎ ‎‏‏              Commands List\n\n/start@huixx\\_bot \\- start caring for ${user.name}\n/help@huixx\\_bot \\- display help menu\n/user@huixx\\_bot <tag\\> \\- start caring for somebody else\n/time@huixx\\_bot <time in 24hr clock\\> \\- change time to show care\n/stop@huixx\\_bot \\- stop caring for ${user.name}`,{parse_mode:"MarkdownV2"});
         }
     }
+})
+
+bot.onText(/water/,(msg,match)=>{
+    console.log('water detected!');
 })
 
 function getCurrentTime(){
